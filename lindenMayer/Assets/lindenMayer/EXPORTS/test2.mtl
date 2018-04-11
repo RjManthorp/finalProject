@@ -1,0 +1,10 @@
+newmtl leaf4
+Kd 1 1 1
+map_Kd C:\Users\Ryan\Desktop\finalProject\lindenMayer\Assets\lindenMayer\EXPORTS\leaf4.png
+illum 2
+
+newmtl tree3
+Kd 1 1 1
+map_Kd C:\Users\Ryan\Desktop\finalProject\lindenMayer\Assets\lindenMayer\EXPORTS\Wood3.png
+illum 2
+

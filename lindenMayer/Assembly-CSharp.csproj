@@ -46,10 +46,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Grower.cs" />
-     <Compile Include="Assets\Scripts\Instantiator.cs" />
-     <Compile Include="Assets\Scripts\RecursiveBundle.cs" />
-     <Compile Include="Assets\Scripts\Restart.cs" />
+     <Compile Include="Assets\OBJExport\OBJExporter.cs" />
+     <Compile Include="Assets\Space Colonization Algorithm\Scripts\cleaner.cs" />
+     <Compile Include="Assets\Space Colonization Algorithm\Scripts\growBranch.cs" />
+     <Compile Include="Assets\Space Colonization Algorithm\Scripts\grower.cs" />
+     <Compile Include="Assets\Space Colonization Algorithm\Scripts\nodeSpawner.cs" />
+     <Compile Include="Assets\lindenMayer\Scripts\Grower.cs" />
+     <Compile Include="Assets\lindenMayer\Scripts\Instantiator.cs" />
+     <Compile Include="Assets\lindenMayer\Scripts\RecursiveBundle.cs" />
+     <Compile Include="Assets\lindenMayer\Scripts\Restart.cs" />
+     <None Include="Assets\lindenMayer\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

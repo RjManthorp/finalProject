@@ -1,8 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Instantiator.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\lindenMayer\Scripts\Instantiator.cs">
     <Files>
-      <File FileName="Assets\Scripts\Instantiator.cs" Line="1" Column="1" />
+      <File FileName="Assets\Space Colonization Algorithm\Scripts\grower.cs" Line="78" Column="24" />
+      <File FileName="Assets\lindenMayer\Scripts\Instantiator.cs" Line="138" Column="67" />
+      <File FileName="Assets\Space Colonization Algorithm\Scripts\nodeSpawner.cs" Line="35" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

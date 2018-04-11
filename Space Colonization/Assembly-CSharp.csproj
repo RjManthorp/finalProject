@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\cleaner.cs" />
      <Compile Include="Assets\Scripts\growBranch.cs" />
      <Compile Include="Assets\Scripts\grower.cs" />
      <Compile Include="Assets\Scripts\nodeSpawner.cs" />

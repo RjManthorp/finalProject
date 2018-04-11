@@ -1,0 +1,10 @@
+newmtl tree2
+Kd 1 1 1
+map_Kd C:\Users\Ryan\Desktop\finalProject\lindenMayer\tree2.png
+illum 2
+
+newmtl leaf2
+Kd 1 1 1
+map_Kd C:\Users\Ryan\Desktop\finalProject\lindenMayer\leaf3.png
+illum 2
+

@@ -13,6 +13,7 @@ public class grower : MonoBehaviour
 	public GameObject treeSegStart;
 	public GameObject treeSeg;
 
+
 	public float spawnTime = 0.3f;
 
 	private void Start()
@@ -21,8 +22,6 @@ public class grower : MonoBehaviour
 		rb = GetComponent<Rigidbody>();
 
 		InvokeRepeating ("spawnSeg", 0.0f, spawnTime);
-
-
 
 	}
 
@@ -39,24 +38,39 @@ public class grower : MonoBehaviour
 		{
 			Vector3 direction = (target.position - transform.position).normalized;
 			rb.MovePosition(transform.position + direction * speed * Time.deltaTime);
-			transform.LookAt (target);
+			//transform.LookAt (target);
 			//Instantiate (treeSeg, new Vector3 (treeSeg.gameObject.GetComponent<Transform> ().position.x, treeSeg.gameObject.GetComponent<Transform> ().position.y,  treeSeg.gameObject.GetComponent<Transform> ().position.z), Quaternion.identity);
 		}
 			
 
 		target = FindTarget();
 		rb = GetComponent<Rigidbody>();
+
+		if (Input.GetKeyUp (KeyCode.B)) 
+		{
+			
+			splitBranch ();
+		}
 	}
 
 	private void OnCollisionEnter( Collision collision )
 	{
+		if( collision.collider.CompareTag("test") )
+		{
+			collision.collider.gameObject.tag = "node";
+			collision.collider.gameObject.GetComponent<Renderer> ().material.color = Color.red;
+		}
+
 		Debug.Log ("collided");
 		if( collision.collider.CompareTag("node") )
 		{
-			collision.collider.gameObject.tag = "Untagged"; // Remove the tag so that FindTarget won't return it
-			Destroy( collision.collider.gameObject ) ;
 			target = FindTarget();
 		}
+	}
+
+	void splitBranch()
+	{
+		Instantiate (treeSegStart,  new Vector3 (treeSegStart.gameObject.GetComponent<Transform> ().position.x, treeSegStart.gameObject.GetComponent<Transform> ().position.y,  treeSegStart.gameObject.GetComponent<Transform> ().position.z), Quaternion.Euler(60,60,60));
 	}
 
 	public Transform FindTarget()
@@ -77,6 +91,11 @@ public class grower : MonoBehaviour
 			{
 				closest = candidates[i].transform;
 				minDistance = distance;
+			}
+			if (distance <= 0.3f) 
+			{
+				Destroy (candidates [i].gameObject);
+				Instantiate (treeSegStart,  new Vector3 (treeSegStart.gameObject.GetComponent<Transform> ().position.x, treeSegStart.gameObject.GetComponent<Transform> ().position.y,  treeSegStart.gameObject.GetComponent<Transform> ().position.z), Quaternion.Euler(60,160,160));
 			}
 		}    
 		return closest;

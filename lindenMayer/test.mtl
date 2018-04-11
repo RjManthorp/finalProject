@@ -1,0 +1,10 @@
+newmtl leafs
+Kd 1 1 1
+map_Kd null
+illum 2
+
+newmtl tree3
+Kd 1 1 1
+map_Kd null
+illum 2
+
