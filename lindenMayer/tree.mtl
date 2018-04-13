@@ -1,9 +1,0 @@
-newmtl tree3
-Kd 1 1 1
-map_Kd null
-illum 2
-
-newmtl Default-Material
-Kd 1 1 1
-illum 2
-
